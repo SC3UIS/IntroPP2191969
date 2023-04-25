@@ -54,8 +54,11 @@ En resumen, la directiva #pragma omp parallel for reduction(+:sum) se utiliza pa
 # Archivo llamado summaSimple.c (Archivo del profesor)
 
 include <stdio.h>
+
 int main()
+
 {
+
     int num, count, sum = 0;
     printf("Enter a positive integer: ");
     scanf("%d", &num);
