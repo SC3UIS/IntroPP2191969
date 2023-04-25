@@ -1,0 +1,17 @@
+# Ejecucion en mi Maquina Local, se realizo en dev C++
+
+Enter a positive integer: 2404
+
+Sum = 2890810
+
+--------------------------------
+Process exited after 56.58 seconds with return value 0
+
+
+
+
+#Ejecución en Guane, se realizo en MobaXterm
+
+Enter a positive integer: 2404
+
+Sum = 2890810
