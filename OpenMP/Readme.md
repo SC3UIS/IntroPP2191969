@@ -81,7 +81,10 @@ Por último, el programa utiliza la función printf() para imprimir el valor de 
 
 En resumen, este programa es una implementación simple de la fórmula de la suma de los primeros num números enteros positivos, utilizando un bucle for para realizar la operación de suma.
 
+# Ejecución en Maquina Local
 
+ ***
+ 
 # Ejecucion en Guane-1
 
 ***
