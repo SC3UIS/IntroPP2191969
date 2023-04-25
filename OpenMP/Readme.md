@@ -19,11 +19,15 @@ Aplicar los fundamentos de OpenMP vistos en clase y en la bibliografía relacion
 # Archivo llamado omp_summaSimple.c
 
 include <stdio.h>
+
 include <omp.h>
 
 int main()
+
 {
+
     int num, count, sum = 0;
+    
     printf("Enter a positive integer: ");
     scanf("%d", &num);
     #pragma omp parallel for reduction(+:sum)
