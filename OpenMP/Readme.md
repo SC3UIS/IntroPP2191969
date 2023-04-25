@@ -1,4 +1,4 @@
-#Introducción al trabajo:
+# Introducción al trabajo:
 
 En esta primera entrega, dividida en cinco partes, tiene como objetivo evaluar las competencias adquiridas en torno a la transformación de códigos que se encuentran implementados en C/C++ para su ejecución paralela usando OpenMP. Cada uno de los estudiantes recibirá un correo electrónico personalizado que contendrá la descripción y encabezado del código recibido (en inglés principalmente), junto con el código respectivo (en .c). Este código se encuentra debidamente documentado y licenciado para su uso bajo una licencia GPL .
 
