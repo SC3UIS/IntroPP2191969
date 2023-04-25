@@ -2,21 +2,21 @@
 
 En esta primera entrega, dividida en cinco partes, tiene como objetivo evaluar las competencias adquiridas en torno a la transformación de códigos que se encuentran implementados en C/C++ para su ejecución paralela usando OpenMP. Cada uno de los estudiantes recibirá un correo electrónico personalizado que contendrá la descripción y encabezado del código recibido (en inglés principalmente), junto con el código respectivo (en .c). Este código se encuentra debidamente documentado y licenciado para su uso bajo una licencia GPL .
 
-#Funcionamiento:
+# Funcionamiento:
 
 Se explica el funcionamiento del código, opciones de compilación y cómo se ejecuta tanto en su máquina local como en GUANE-1.
 
-#Desarrollo:
+# Desarrollo:
 
 En este proyecto se evaluaron las habilidades adquiridas en la transformación de códigos de programación en C para su ejecución en paralelo mediante el uso de la biblioteca OpenMP. La metodología utilizada para la evaluación y entrega consistió en la creación de una cuenta en Github, la vinculación con el equipo de Supercomputación y Cálculo Científico "beginners-hpc" de la Universidad Industrial de Santander (SC3UIS), y la creación de un repositorio que incluyera el código original en C, la versión modificada para ejecución en paralelo con OpenMP, el archivo sbatch para la ejecución en el sistema GUANE-1, el archivo README con la descripción del código y sus opciones de compilación y ejecución, y el archivo de salida con los resultados obtenidos. Esta evaluación permitió poner en práctica y demostrar el conocimiento adquirido en programación paralela con OpenMP, y su aplicación en el contexto de la supercomputación y el cálculo científico.
 
-#Objetivo:
+# Objetivo:
 
 Aplicar los fundamentos de OpenMP vistos en clase y en la bibliografía relacionada para paralelizar el código original, manteniendo el estilo de la documentación y agregando una sección que explique las modificaciones realizadas en la versión en OpenMP.
 
-#Explicaciones Codigos Proporcionados:
+# Explicaciones Codigos Proporcionados:
 
-#Archivo llamado omp_summaSimple.c
+# Archivo llamado omp_summaSimple.c
 
 include <stdio.h>
 include <omp.h>
@@ -24,18 +24,14 @@ include <omp.h>
 int main()
 {
     int num, count, sum = 0;
-
     printf("Enter a positive integer: ");
     scanf("%d", &num);
-
     #pragma omp parallel for reduction(+:sum)
     for(count = 1; count <= num; ++count)
     {
         sum += count;
     }
-
-    printf("\nSum = %d\n", sum);
-
+     printf("\nSum = %d\n", sum);
     return 0;
 }
 
@@ -51,24 +47,20 @@ La cláusula reduction(+:sum) indica que la variable sum debe ser compartida ent
 
 En resumen, la directiva #pragma omp parallel for reduction(+:sum) se utiliza para paralelizar la ejecución de un bucle for y agregar el resultado en una variable compartida de manera segura, utilizando la operación de reducción. Esto puede mejorar significativamente el rendimiento de los programas que realizan operaciones repetitivas intensivas, al permitir que varias tareas sean ejecutadas en paralelo por varios hilos.
 
-#Archivo llamado summaSimple.c (Archivo del profesor)
+# Archivo llamado summaSimple.c (Archivo del profesor)
 
 include <stdio.h>
 int main()
 {
     int num, count, sum = 0;
-
     printf("Enter a positive integer: ");
     scanf("%d", &num);
-
     // for loop terminates when num is less than count
     for(count = 1; count <= num; ++count)
     {
         sum += count;
     }
-
     printf("\nSum = %d\n", sum);
-
     return 0;
 }
 
@@ -83,11 +75,11 @@ Por último, el programa utiliza la función printf() para imprimir el valor de 
 En resumen, este programa es una implementación simple de la fórmula de la suma de los primeros num números enteros positivos, utilizando un bucle for para realizar la operación de suma.
 
 
-#Ejecucion en Guane-1
+# Ejecucion en Guane-1
 
 ***
 
-#Conclusiones:
+# Conclusiones:
 
 En conclusión, este trabajo de programación paralela utilizando OpenMP y Github fue una oportunidad valiosa para adquirir habilidades y conocimientos importantes en dos áreas fundamentales de la informática: la programación paralela y la gestión de proyectos de software colaborativo.
 
