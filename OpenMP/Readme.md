@@ -83,7 +83,10 @@ En resumen, este programa es una implementación simple de la fórmula de la sum
 
 # Ejecución en Maquina Local
 
- ***
+ ![image](https://user-images.githubusercontent.com/105290908/234173604-49f4a28a-fc65-4707-afef-51e36697643b.png)
+
+![image](https://user-images.githubusercontent.com/105290908/234173632-1a84b4e6-ca23-4fdc-9df3-5c6b736ee224.png)
+
  
 # Ejecucion en Guane-1
 
