@@ -132,3 +132,19 @@ int main()
 19)MPI_Finalize();: Finalización del entorno MPI.
 
 20)return 0;: Finaliza la ejecución del programa.
+
+
+
+# Bonus ¿que pasa si hacen la comparación con su equipo personal, igual incluyendo MPI?
+
+Solución:
+
+Cuando se compara mi computadora HP Pavilion Gaming con respecto a MPI, incluyendo detalles sobre su rendimiento y capacidad de ejecutar aplicaciones MPI, hay varios aspectos a considerar.
+
+En primer lugar, el rendimiento del procesador es fundamental para el desempeño de MPI. Mi HP Pavilion Gaming está equipada con un procesador Intel Core i7 de última generación. Este procesador tiene múltiples núcleos y una alta frecuencia de reloj, lo que me permite ejecutar tareas MPI de manera eficiente. Con esta potencia de procesamiento, puedo llevar a cabo cómputos paralelos y aprovechar al máximo el rendimiento de MPI.
+
+Además, mi computadora cuenta con 16 GB de memoria RAM, lo cual es adecuado para muchas aplicaciones MPI. La cantidad de RAM disponible es esencial para satisfacer las demandas de memoria de las aplicaciones MPI. Al tener suficiente memoria RAM, puedo ejecutar aplicaciones MPI que requieren grandes cantidades de datos sin experimentar problemas de rendimiento.
+
+En cuanto a la tarjeta gráfica (GPU), mi HP Pavilion Gaming está equipada con una tarjeta gráfica NVIDIA GeForce GTX, lo que me proporciona una capacidad adicional de procesamiento paralelo. Si bien MPI generalmente se utiliza para la comunicación entre procesos en la CPU, en algunas aplicaciones es posible aprovechar la capacidad de cálculo de la GPU para acelerar el rendimiento. Esto puede ser especialmente beneficioso en aplicaciones de procesamiento intensivo, como simulaciones científicas o renderización de gráficos.
+
+En resumen, mi computadora HP Pavilion Gaming ofrece un rendimiento sólido para ejecutar aplicaciones MPI. Su potente procesador, amplia memoria RAM y capacidad de GPU proporcionan las características necesarias para aprovechar al máximo el potencial de MPI. Con esta configuración, puedo realizar tareas de cómputo intensivo y aprovechar la escalabilidad y el paralelismo ofrecidos por MPI.
