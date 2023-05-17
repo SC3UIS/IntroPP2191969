@@ -4,53 +4,42 @@
 #include <stdio.h>
 #include <mpi.h>
 
-int main(int argc, char *argv[])
+int main()
 {
     int num, count, sum = 0;
-    int rank, size, local_sum = 0;
-    double startTime, endTime;
-    
+    int rank, size;
 
-    // Se empieza a contabilizar el tiempo
-    startTime = MPI_Wtime();
-
-    MPI_Init(&argc, &argv);
+    MPI_Init(NULL, NULL);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
-    
+
     if (rank == 0) {
-        printf("\nSuma de los primeros n numeros naturales (Paralelizado con MPI)\n");
-        printf("\nIngrese un Entero Positivo: \n");
+        printf("Enter a positive integer: ");
         scanf("%d", &num);
     }
-    
+
     MPI_Bcast(&num, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
-    int start = (num / size) * rank + 1;
-    int end = (num / size) * (rank + 1);
+    int start = rank * (num / size) + 1;
+    int end = (rank + 1) * (num / size);
 
     if (rank == size - 1) {
         end = num;
     }
 
-    for (count = start; count <= end; ++count) {
-        local_sum += count;
+    for (count = start; count <= end; ++count)
+    {
+        sum += count;
     }
 
-    MPI_Reduce(&local_sum, &sum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
+    int totalSum = 0;
+    MPI_Reduce(&sum, &totalSum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if (rank == 0) {
-        printf("Suma Total = %d\n", sum);
-        
-        // Se termina de contabilizar el tiempo
-        endTime = MPI_Wtime();        
-        printf("La ejecucion tardo %lf segundos\n", endTime - startTime); 
+        printf("\nSum = %d\n", totalSum);
     }
 
     MPI_Finalize();
 
-    // Se termina de contabilizar el tiempo
-    endTime = MPI_Wtime(); 
-    
     return 0;
 }
