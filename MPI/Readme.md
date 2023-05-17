@@ -27,7 +27,8 @@ real    0m2.446s
 user    0m0.001s
 sys     0m0.002s
 
-![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/233b118a-e0ed-4c79-bfb0-6c0ac1f85a66)
+![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/ff373790-ae3f-499e-8470-be1eb0b1ef38)
+
 
 
 # ARCHIO omp_summaSimple.C
