@@ -90,7 +90,9 @@ En resumen, este programa es una implementación simple de la fórmula de la sum
  
 # Ejecucion en Guane-1
 
-***
+![image](https://user-images.githubusercontent.com/105290908/234175273-3deae5d6-2621-4ab9-a344-bf5efad647b6.png)
+
+
 
 # Conclusiones:
 
