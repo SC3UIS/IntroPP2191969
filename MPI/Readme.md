@@ -1,7 +1,7 @@
 
-Tiempo de ejecución para los tres archivos diferentes.
+# Tiempo de ejecución para los tres archivos diferentes.
 
-#ARCHIVO mpi_summaSimple.C
+# ARCHIVO mpi_summaSimple.C
 
 [sdamendozaa@guane MPI_1]$ time mpirun -np 12 ./mpi_Simple
 Enter a positive integer: 12
@@ -12,8 +12,10 @@ real    0m3.492s
 user    0m35.465s
 sys     0m2.251s
 
+![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/ea899e6f-d9da-4b45-be08-356bbe21731c)
 
-#ARCHIVO summaSimple.C
+
+# ARCHIVO summaSimple.C
 
 [sdamendozaa@guane MPI_1]$ gcc summaSimple.C -o summa
 [sdamendozaa@guane MPI_1]$ time ./summa
@@ -25,7 +27,10 @@ real    0m2.446s
 user    0m0.001s
 sys     0m0.002s
 
-#ARCHIO omp_summaSimple.C
+![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/233b118a-e0ed-4c79-bfb0-6c0ac1f85a66)
+
+
+# ARCHIO omp_summaSimple.C
 [sdamendozaa@guane OpenMP]$ time ./omp_Simple
 Enter a positive integer: 12
 
@@ -34,6 +39,8 @@ Sum = 78
 real    0m1.977s
 user    0m0.000s
 sys     0m0.008s
+
+![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/088595c6-6635-4888-9d0a-64aee8d56869)
 
 
 Explicación ajustes realizados al codigo para convertirlo de OMP A MPI.
