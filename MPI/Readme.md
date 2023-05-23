@@ -31,7 +31,7 @@ sys     0m0.002s
 
 
 
-# ARCHIO omp_summaSimple.C
+# ARCHIVO omp_summaSimple.C
 [sdamendozaa@guane OpenMP]$ time ./omp_Simple
 Enter a positive integer: 12
 
