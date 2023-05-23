@@ -1,0 +1,27 @@
+Suma de los primeros n numeros naturales (Sin Paralelizar)
+Enter a positive integer: 12
+
+Sum = 78
+
+real    0m2.446s
+user    0m0.001s
+sys     0m0.002s
+
+
+Suma de los primeros n numeros naturales (OMP)
+Enter a positive integer: 12
+
+Sum = 78
+
+real    0m1.977s
+user    0m0.000s
+sys     0m0.008s
+
+Suma de los primeros n numeros naturales (MPI)
+Enter a positive integer: 12
+
+Sum = 78
+
+real    0m3.492s
+user    0m35.465s
+sys     0m2.251s
