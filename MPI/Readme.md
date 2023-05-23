@@ -43,8 +43,42 @@ sys     0m0.008s
 
 ![image](https://github.com/SC3UIS/IntroPP2191969/assets/105290908/088595c6-6635-4888-9d0a-64aee8d56869)
 
+# Comparación:
 
-Explicación ajustes realizados al codigo para convertirlo de OMP A MPI.
+Los tres archivos diferentes son: mpi_summaSimple.C, summaSimple.C y omp_summaSimple.C. A continuación, se muestra el tiempo de ejecución para cada uno de ellos:
+
+mpi_summaSimple.C:
+
+Tiempo real (real): 0m3.492s
+Tiempo de usuario (user): 0m35.465s
+Tiempo del sistema (sys): 0m2.251s
+
+summaSimple.C:
+
+Tiempo real (real): 0m2.446s
+Tiempo de usuario (user): 0m0.001s
+Tiempo del sistema (sys): 0m0.002s
+
+omp_summaSimple.C:
+
+Tiempo real (real): 0m1.977s
+Tiempo de usuario (user): 0m0.000s
+Tiempo del sistema (sys): 0m0.008s
+En términos de tiempo de ejecución, se puede observar que omp_summaSimple.C tiene el menor tiempo real, seguido de summaSimple.C y mpi_summaSimple.C. Sin embargo, es importante tener en cuenta que estos tiempos pueden variar según las condiciones de ejecución y el hardware utilizado.
+
+# Conclusiones:
+
+1)El archivo omp_summaSimple.C, que utiliza OpenMP para paralelizar el código, tiene el menor tiempo de ejecución real en comparación con los otros dos archivos. Esto indica que el procesamiento paralelo proporcionado por OpenMP puede mejorar el rendimiento y acelerar el tiempo de ejecución de la aplicación.
+
+2)El archivo summaSimple.C tiene un tiempo de ejecución real ligeramente mayor que omp_summaSimple.C, pero es significativamente más rápido que mpi_summaSimple.C. Esto sugiere que el enfoque de paralelización utilizado en summaSimple.C, que no depende de MPI ni de la comunicación entre procesos, puede ser más eficiente en términos de tiempo de ejecución.
+
+3)El archivo mpi_summaSimple.C, que utiliza el estándar MPI para la programación paralela y la comunicación entre procesos, muestra el tiempo de ejecución real más alto de los tres archivos. Esto se debe a la necesidad de comunicación y sincronización entre los procesos, lo cual introduce cierta sobrecarga en comparación con las soluciones sin comunicación.
+
+4)En general, se puede concluir que el enfoque de paralelización proporcionado por OpenMP (omp_summaSimple.C) ofrece el mejor rendimiento en términos de tiempo de ejecución. Sin embargo, la elección del enfoque de paralelización adecuado depende de las características específicas de la aplicación, el hardware y los requisitos de comunicación entre procesos. Es importante evaluar cuidadosamente estas consideraciones al seleccionar la estrategia de paralelización más apropiada para una aplicación en particular.
+
+
+
+# Explicación ajustes realizados al codigo para convertirlo de OMP A MPI.
 
 // Simple Program to calculate the sum of first n natural numbers
 // Positive integers 1,2,3...n are known as natural numbers
